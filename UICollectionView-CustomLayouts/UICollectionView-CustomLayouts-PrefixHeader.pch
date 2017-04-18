@@ -1,0 +1,23 @@
+//
+//  UICollectionView-CustomLayouts-PrefixHeader.pch
+//  UICollectionView-CustomLayouts
+//
+//  Created by zhanghao on 2017/4/11.
+//  Copyright © 2017年 zhanghao. All rights reserved.
+//
+
+#ifndef UICollectionView_CustomLayouts_PrefixHeader_pch
+#define UICollectionView_CustomLayouts_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIScreen+Extend.h"
+#import "UIImage+Color.h"
+#import "UIColor+Extend.h"
+#import "UIView+Layout.h"
+
+
+#import "Masonry.h"
+
+#endif /* UICollectionView_CustomLayouts_PrefixHeader_pch */
