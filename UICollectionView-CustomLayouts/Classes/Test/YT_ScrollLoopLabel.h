@@ -50,6 +50,12 @@
 /// 轮播label文字的对齐方式
 @property (nonatomic, assign) NSTextAlignment textAlignment;
 
+/// 轮播label文字的字距调整
+@property (nonatomic, assign) CGFloat kernValue;
+
+/// 轮播label文字的行距调整
+@property (nonatomic, assign) CGFloat lineSpacing;
+
 /// 设置数据源
 @property (nonatomic, strong) NSArray<YT_ScrollLoopModel *> *models;
 

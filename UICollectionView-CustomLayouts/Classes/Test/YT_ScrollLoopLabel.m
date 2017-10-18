@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, assign) UIEdgeInsets textInsets;
-@property (nonatomic, strong) YT_ScrollLoopModel *model;
 
 @end
 
@@ -46,11 +45,19 @@
     }];
 }
 
-- (void)setModel:(YT_ScrollLoopModel *)model {
+- (void)setModel:(YT_ScrollLoopModel *)model
+       kernValue:(CGFloat)kern lineSpacing:(CGFloat)LineSpacing{
     if (model.attributedText && model.attributedText.length) {
         _textLabel.attributedText = model.attributedText;
     } else {
-        _textLabel.text = model.text;
+        if (!model.text) return;
+        NSString *text = model.text;
+        NSMutableAttributedString *attiText = [[NSMutableAttributedString alloc] initWithString:text];
+        [attiText addAttribute:NSKernAttributeName value:@(kern) range:NSMakeRange(0, [text length])];
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setLineSpacing:LineSpacing];
+        [attiText addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [text length])];
+        _textLabel.attributedText = attiText;
     }
 }
 
@@ -159,7 +166,8 @@ static NSString *const YTScrollLoopCellIdentifier = @"YTScrollLoopCellIdentifier
     cell.textLabel.textAlignment = self.textAlignment;
     cell.textLabel.numberOfLines = self.numberOfLines;
     cell.textInsets = self.textEdgeInsets;
-    cell.model = _models[indexPath.row % _models.count];
+    YT_ScrollLoopModel *model = _models[indexPath.row % _models.count];
+    [cell setModel:model kernValue:self.kernValue lineSpacing:self.lineSpacing];
     return cell;
 }
 
