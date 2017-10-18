@@ -40,6 +40,8 @@
 		61963A2D1E9FC9E200453962 /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963A2C1E9FC9E200453962 /* LineLayout.m */; };
 		619C47BB1EA0AEB000A9E739 /* Style4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619C47BA1EA0AEB000A9E739 /* Style4ViewController.m */; };
 		9DC88870930AAD55B7D62603 /* Pods_UICollectionView_CustomLayouts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B346F29D0F97950708489962 /* Pods_UICollectionView_CustomLayouts.framework */; };
+		F26064D81F9703F900129412 /* MyTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26064D71F9703F900129412 /* MyTestViewController.m */; };
+		F26064DB1F970FB400129412 /* YT_ScrollLoopLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F26064DA1F970FB400129412 /* YT_ScrollLoopLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,10 @@
 		619C47BA1EA0AEB000A9E739 /* Style4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Style4ViewController.m; sourceTree = "<group>"; };
 		B346F29D0F97950708489962 /* Pods_UICollectionView_CustomLayouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionView_CustomLayouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C1F4087DD31449A793B633 /* Pods-UICollectionView-CustomLayouts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView-CustomLayouts.release.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionView-CustomLayouts/Pods-UICollectionView-CustomLayouts.release.xcconfig"; sourceTree = "<group>"; };
+		F26064D61F9703F900129412 /* MyTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestViewController.h; sourceTree = "<group>"; };
+		F26064D71F9703F900129412 /* MyTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTestViewController.m; sourceTree = "<group>"; };
+		F26064D91F970FB400129412 /* YT_ScrollLoopLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_ScrollLoopLabel.h; sourceTree = "<group>"; };
+		F26064DA1F970FB400129412 /* YT_ScrollLoopLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_ScrollLoopLabel.m; sourceTree = "<group>"; };
 		FAE53CC760EEC048794B2797 /* Pods-UICollectionView-CustomLayouts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView-CustomLayouts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionView-CustomLayouts/Pods-UICollectionView-CustomLayouts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +265,7 @@
 		615999101E9D171F0026CD0D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F26064D51F9703E600129412 /* Test */,
 				61963A0F1E9F774D00453962 /* style1 */,
 				61963A161E9F774D00453962 /* style2 */,
 				61963A231E9F78EA00453962 /* style3 */,
@@ -350,6 +357,17 @@
 				B346F29D0F97950708489962 /* Pods_UICollectionView_CustomLayouts.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F26064D51F9703E600129412 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F26064D61F9703F900129412 /* MyTestViewController.h */,
+				F26064D71F9703F900129412 /* MyTestViewController.m */,
+				F26064D91F970FB400129412 /* YT_ScrollLoopLabel.h */,
+				F26064DA1F970FB400129412 /* YT_ScrollLoopLabel.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,7 +560,9 @@
 				615998E51E9D13B20026CD0D /* ViewController.m in Sources */,
 				615998E21E9D13B20026CD0D /* AppDelegate.m in Sources */,
 				61963A1D1E9F774D00453962 /* Style1ViewController.m in Sources */,
+				F26064DB1F970FB400129412 /* YT_ScrollLoopLabel.m in Sources */,
 				61963A0B1E9F321F00453962 /* UINavigationBar+BackgroundColor.m in Sources */,
+				F26064D81F9703F900129412 /* MyTestViewController.m in Sources */,
 				61963A221E9F780800453962 /* BaseStyleViewController.m in Sources */,
 				61963A1E1E9F774D00453962 /* Style2ViewController.m in Sources */,
 				61963A061E9F321F00453962 /* CALayer+Layout.m in Sources */,

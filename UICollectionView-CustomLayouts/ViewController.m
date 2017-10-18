@@ -41,7 +41,8 @@
     [self addStyle:@"Line layout / 线性布局2" class:@"Style3ViewController"];
     [self addStyle:@"Table layout / 表格布局" class:@"Style4ViewController"];
     [self addStyle:@"Carousel layout / 轮转布局" class:@"Style5ViewController"];
-
+    [self addStyle:@"MyTestDemo" class:@"MyTestViewController"];
+    
     //    [self addStyle:@"Test" class:@"TestViewController"];
 }
 
