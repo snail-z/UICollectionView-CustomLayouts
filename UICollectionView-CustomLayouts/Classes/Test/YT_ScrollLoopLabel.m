@@ -171,6 +171,17 @@ static NSString *const YTScrollLoopCellIdentifier = @"YTScrollLoopCellIdentifier
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger idx = indexPath.item % _models.count;
+    if (self.didClickItem) {
+        self.didClickItem(self, idx);
+    } else {
+        if ([self.delegate respondsToSelector:@selector(scrollLoopLabel:didClickItemAtIndex:)]) {
+            [self.delegate scrollLoopLabel:self didClickItemAtIndex:idx];
+        }
+    }
+}
+
 #pragma mark - Auto Scroll
 
 - (void)invalidateTimer {

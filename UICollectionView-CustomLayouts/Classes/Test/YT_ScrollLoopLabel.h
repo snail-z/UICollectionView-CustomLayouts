@@ -10,12 +10,18 @@
 
 @interface YT_ScrollLoopModel : NSObject
 
+/// 文本信息
 @property (nonatomic, strong) NSString *text;
+
+/// 富文本信息 (优先使用attributedText)
 @property (nonatomic, strong) NSAttributedString *attributedText;
 
 @end
 
+@protocol YT_ScrollLoopLabelDelegate;
 @interface YT_ScrollLoopLabel : UIView
+
+@property (nonatomic, weak) id <YT_ScrollLoopLabelDelegate> delegate;
 
 /// 设置滚动方向 (默认水平方向)
 @property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
@@ -61,5 +67,16 @@
 
 /// 刷新数据源
 - (void)reloadData;
+
+/// block方式监听点击事件
+@property (nonatomic, copy) void (^didClickItem)(YT_ScrollLoopLabel *loopLabel, NSInteger idx);
+
+@end
+
+@protocol YT_ScrollLoopLabelDelegate <NSObject>
+@optional
+
+/// 代理方法监听每个item点击事件 (block优先)
+- (void)scrollLoopLabel:(YT_ScrollLoopLabel *)loopLabel didClickItemAtIndex:(NSInteger)idx;
 
 @end

@@ -33,6 +33,7 @@
     _loopView.backColor = [UIColor darkGrayColor];
     _loopView.lineSpacing = 10;
     _loopView.kernValue = 2;
+    
     [self.view addSubview:_loopView];
     
     NSArray *array = @[@"中国共产党第十九次全国代表大会开幕会于10月18日上午9：00在人民大会堂大礼堂举行",
@@ -49,6 +50,11 @@
     }
     _loopView.models = models;
     [_loopView reloadData];
+    
+    _loopView.didClickItem = ^(YT_ScrollLoopLabel *loopLabel, NSInteger idx) {
+      
+        NSLog(@"idx---> %lu", idx);
+    };
 }
 
 @end
